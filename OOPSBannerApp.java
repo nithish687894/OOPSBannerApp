@@ -1,11 +1,18 @@
 /**
- * OOPSBannerApp - UC5: Inline Array Init
+ * OOPSBannerApp - UC6: Static Methods
  * @author NithishKumar
- * @version 5.0
+ * @version 6.0
  */
 public class OOPSBannerApp {
+
     public static void main(String[] args) {
-        String[] bannerLines = {
+        String[] bannerLines = createBanner();
+        printBanner(bannerLines);
+    }
+
+    // Method to create banner
+    public static String[] createBanner() {
+        return new String[] {
             String.join(" ", " *****  ", " *****  ", "****   ", " *****  "),
             String.join(" ", "*     * ", "*     * ", "*   *  ", "*       "),
             String.join(" ", "*     * ", "*     * ", "*   *  ", "*       "),
@@ -14,7 +21,10 @@ public class OOPSBannerApp {
             String.join(" ", "*     * ", "*     * ", "*      ", "      * "),
             String.join(" ", " *****  ", " *****  ", "*      ", " *****  ")
         };
+    }
 
+    // Method to print banner
+    public static void printBanner(String[] bannerLines) {
         for (String line : bannerLines) {
             System.out.println(line);
         }
